@@ -1,17 +1,22 @@
 <?php
-	
+
 	// Constants
+    define('TITLE', 'Arrays');
 
-	
-	// Custom Variables
+    // Custom Variables
+    $lesson_num = 10;
+    $this_year = date('Y');
+    $my_name = 'Sunny';
 
+    $a = 20;
+    $b = 50;
 
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<title>PHP <!-- TITLE --></title>
+		<title>PHP <?php echo TITLE; ?></title>
 		<link href="../assets/styles.css" rel="stylesheet">
 	</head>
 	<body>
@@ -20,20 +25,24 @@
 				<img src="../assets/img/logo.png" alt="PHP">
 			</a>
 			
-			<h1>Tutorial <!-- LESSON NUMBER -->: <small><!-- TITLE --></small></h1>
+			<h1>Tutorial <?php echo $lesson_num; ?>: <small><?php echo TITLE; ?></small></h1>
 			<hr>
 			
 			<h2>Your Example</h2>
 			
 			<div class="sandbox">
-				
+			    <?php
+                    if ($a < $b) {
+                        echo 'Yep! $a is certainly less than $b!';
+                    };
+                ?>
 			</div><!-- end sandbox -->
 			
 			<a href="index.php" class="button">Back to the lecture</a>
 			
 			<hr>
 			
-			<small>&copy;<!-- YEAR --> - <!-- NAME --></small>
+			<small>&copy;<?php echo $this_year; ?> - <?php echo $my_name; ?></small>
 		</div><!-- end wrapper -->
 		
 		<div class="copyright-info">
