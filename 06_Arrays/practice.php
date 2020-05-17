@@ -1,19 +1,22 @@
 <?php
 	
 	// Constants
-
+    define('TITLE', 'Arrays');
 	
 	// Custom Variables
-
+    $lesson_num = 6;
+    $my_name = 'Sunny';
+    $this_year = date('Y');
 	
 	// Moustache Array
-	
+    $moustaches = array('Handlebar', 'Salvador Dali', 'Fu Munchu')
+
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<title><!-- PAGE TITLE --></title>
+		<title><?php echo TITLE; ?></title>
 		<link href="../assets/styles.css" rel="stylesheet">
 	</head>
 	<body>
@@ -22,7 +25,7 @@
 				<img src="../assets/img/logo.png" alt="PHP">
 			</a>
 			
-			<h1>Lecture <!-- LESSON NUMBER -->: <small><!-- PAGE TITLE --></small></h1>
+			<h1>Lecture <?php echo $lesson_num; ?>: <small><?php echo TITLE; ?></small></h1>
 			<hr>
 			
 			<h2>Your Example</h2>
@@ -31,9 +34,9 @@
 			
 				<h2>Moustache Types</h2>
 				<ul>
-					<li><!-- MOUSTACHE 1 --></li>
-					<li><!-- MOUSTACHE 2 --></li>
-					<li><!-- MOUSTACHE 3 --></li>
+					<li><?php echo $moustaches[0]; ?></li>
+					<li><?php echo $moustaches[1]; ?></li>
+					<li><?php echo $moustaches[2]; ?></li>
 				</ul>
 				
 			</div><!-- end sandbox -->
@@ -42,7 +45,7 @@
 			
 			<hr>
 			
-			<small>&copy;<!-- YEAR --> - <!-- YOUR NAME --></small>
+			<small>&copy;<?php echo $this_year; ?> - <?php echo $my_name; ?></small>
 		</div><!-- end wrapper -->
 		
 		<div class="copyright-info">
