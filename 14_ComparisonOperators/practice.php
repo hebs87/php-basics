@@ -1,27 +1,33 @@
 <?php
-	
-	// Constants
 
-	
-	// Custom Variables
+    // Constants
+    define("TITLE", "Comparison Operators");
 
+    // Custom Variables
+    $this_year = date('Y');
+    $my_name = "Brad Hussey";
+    $lesson_num = 14;
+
+    $yearsOnEarth = 32;
+    $favouriteStringNum = "1";
+    $birthCountry = 'India';
 
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<title>PHP <!-- TITLE --></title>
-		<link href="../assets/styles.css" rel="stylesheet">
+        <title>PHP <?php echo TITLE; ?></title>
+        <link href="../assets/styles.css" rel="stylesheet">
 	</head>
 	<body>
 		<div class="wrapper">
 			<a href="/" title="Back to directory" id="logo">
 				<img src="../assets/img/logo.png" alt="PHP">
 			</a>
-			
-			<h1>Tutorial <!-- LESSON NUMBER -->: <small><!-- TITLE --></small></h1>
-			<hr>
+
+            <h1>Tutorial <?php echo $lesson_num; ?>: <small><?php echo TITLE; ?></small></h1>
+            <hr>
 			
 			<h2>Your Example</h2>
 			
@@ -29,52 +35,74 @@
 				
 				<h3>Equal <code>==</code></h3>
 				<?php
-					// your code here
+					if ($yearsOnEarth == 32) {
+					    echo "<p>Your age is equal to $yearsOnEarth</p>";
+                    }
 				?>
 				
 				<h3>Identical <code>===</code></h3>
+                <?php
+                    if ($favouriteStringNum === 1) {
+                        echo "<p>Your favourite number is an integer.</p>";
+                    } else if ($favouriteStringNum === "1") {
+                        echo "<p>Your favourite number is a string called 1!</p>";
+                    } else {
+                        echo "<p>You must have a different favourite number than 1 the integer, or string.</p>";
+                    }
+                ?>
+
+                <h3>Not Equal <code>!=</code></h3>
 				<?php
-					// your code here
-				?>
-				
-				<h3>Not Equal <code>!=</code></h3>
-				<?php
-					// your code here
-				?>
+                    if ($birthCountry != "Mexico") {
+                        echo "<p>Excuse me, se&ntilde;or. You must not be from around here.</p>";
+                    }
+                ?>
 				
 				<h3>Not Identical <code>!==</code></h3>
 				<?php
-					// your code here
-				?>
+                    if ($yearsOnEarth !== "32") {
+                        echo "<p>You are not exactly the string \"$yearsOnEarth\"</p>";
+                    } else {
+                        echo "<p>You are exactly the string '$yearsOnEarth'</p>";
+                    }
+                ?>
 				
 				<h3>Less Than <code>&lt;</code></h3>
 				<?php
-					// your code here
-				?>
+                    if ($lessonNum < 15) {
+                        echo "<p>You haven't quite made it to lesson 15, yet.</p>";
+                    }
+                ?>
 				
 				<h3>Greater Than <code>&gt;</code></h3>
 				<?php
-					// your code here
-				?>
-				
-				<h3>Less Than or Equal To <code>&lt;=</code></h3>
-				<?php
-					// your code here
-				?>
-				
-				<h3>Greater Than or Equal To <code>&gt;=</code></h3>
-				<?php
-					// your code here
-				?>
-				
-			</div><!-- end sandbox -->
+                    if ($lessonNum > 10) {
+                        echo "<p>You've made it past lesson 10!</p>";
+                    }
+                ?>
+
+                <h3>Less Than or Equal To <code>&lt;=</code></h3>
+                <?php
+                    if ($lessonNum <= 14) {
+                        echo "<p>$lessonNum is less than or equal to 14.</p>";
+                    }
+                ?>
+
+                <h3>Greater Than or Equal To <code>&gt;=</code></h3>
+                <?php
+                    if ($lessonNum >= 4) {
+                        echo "<p>$lessonNum is greater than or equal to 4.</p>";
+                    }
+                ?>
+
+            </div><!-- end sandbox -->
 			
 			<a href="index.php" class="button">Back to the lecture</a>
 			
 			<hr>
-			
-			<small>&copy;<!-- YEAR --> - <!-- NAME --></small>
-		</div><!-- end wrapper -->
+
+            <small>&copy;<?php echo $this_year; ?> - <?php echo $my_name; ?></small>
+        </div><!-- end wrapper -->
 		
 		<div class="copyright-info">
 			<?php include('../assets/includes/copyright.php'); ?>
