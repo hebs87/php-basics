@@ -1,5 +1,9 @@
 <?php
-    include('includes/arrays.php')
+
+    $companyName = 'Franklin\'s Fine Dining';
+    $thisYear = date('Y');
+    include('includes/arrays.php');
+
 ?>
 
 <!doctype html>
@@ -16,12 +20,12 @@
 <div class="wrapper">
     <div id="banner">
         <!-- Banner -->
-        <a href="<?php echo $navItems[0]['slug'] ?>" title="Return to Home">
+        <a href="<?php echo $navItems[0]['slug']; ?>" title="Return to Home">
             <img src="img/banner.png" alt="Franklin's Fine Dining">
         </a>
     </div>
     <div id="nav">
         <!-- Nav -->
-        <?php include('includes/nav.php') ?>
+        <?php include('includes/nav.php'); ?>
     </div>
     <div class="content">

@@ -31,9 +31,12 @@
         <br>
         Closed
         <br>
+
+        <?php include('includes/store-hours.php') ?>
+
     </div>
 </div>
-<small>&copy;2020 Sunny Hebbar</small>
+<small>&copy;<?php echo $thisYear . ' ' . $companyName; ?></small>
 </div>
 </div>
 <div class="copyright-info">
